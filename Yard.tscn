@@ -1,0 +1,182 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8wlqptxkvotv"]
+
+[ext_resource type="PackedScene" uid="uid://ck74dpa5ca2ga" path="res://CardUI.tscn" id="1_7mjrt"]
+[ext_resource type="PackedScene" uid="uid://cy6qgdnqlpc5m" path="res://Cell.tscn" id="1_bsdhv"]
+
+[node name="Yard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 39.0
+offset_right = 1182.0
+offset_bottom = 989.0
+columns = 5
+
+[node name="Cell" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell2" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell3" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell4" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell5" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell6" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell7" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell8" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell9" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell10" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell11" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell12" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell13" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell14" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell15" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell16" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell17" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell18" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell19" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell20" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell21" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell22" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell23" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell24" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell25" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell26" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell27" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell28" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell29" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cell30" parent="GridContainer" instance=ExtResource("1_bsdhv")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CardUI" parent="." instance=ExtResource("1_7mjrt")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 97.0
+offset_top = 128.0
+offset_right = 247.0
+offset_bottom = 278.0
+grow_horizontal = 1
+grow_vertical = 1
