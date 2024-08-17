@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=3 uid="uid://drd4jbtrugqk4"]
+
+[ext_resource type="PackedScene" uid="uid://cltt710mwwsa2" path="res://Scene/场地格子YardCell.tscn" id="1_j8ywa"]
+
+[node name="场地网格" type="TextureRect"]
+offset_left = 381.0
+offset_top = 72.0
+offset_right = 881.0
+offset_bottom = 672.0
+
+[node name="场地格子" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子2" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子3" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子4" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子5" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子6" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子7" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子8" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子9" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子10" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子11" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子12" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子13" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子14" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子15" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子16" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子17" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子18" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子19" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子20" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子21" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子22" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子23" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子24" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子25" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子26" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子27" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子28" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子29" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0
+
+[node name="场地格子30" parent="." instance=ExtResource("1_j8ywa")]
+layout_mode = 0

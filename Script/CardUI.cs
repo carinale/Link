@@ -26,7 +26,7 @@ public partial class CardUI : Control
 	public Vector2 smallSize = new Vector2(100, 100);
 	public Vector2 largeSize = new Vector2(200, 200);
 	public Vector2 stayTargetPosition = new();
-
+	YardGrid yardGrid;
 
 	public override void _Ready()
 	{
@@ -35,6 +35,7 @@ public partial class CardUI : Control
 		MouseEntered += OnMouseEntered;
 		MouseExited += OnMouseExited;
 		GuiInput += OnGuiInput;
+		yardGrid = GetNode<YardGrid>("/root/BattleScene/场地");
 	}
 
 
@@ -66,14 +67,8 @@ public partial class CardUI : Control
 			{
 				isZooming = false;
 			}						
-
-				
-			
-
 		}
 	}
-
-
 
 
 	//卡牌拖动
@@ -128,10 +123,20 @@ public partial class CardUI : Control
 	//根据当前状态设置停靠的目标点
 	public void SetReturnTargetPostion()
 	{
-		Node tttt = GetParent();
-
-        YardGrid yardGrid = tttt.GetNode<YardGrid>("GridContainer");
-		int i = yardGrid.GetMouseInWhichCell();
+		if (yardGrid==null)
+		{
+			return;
+		}
+		if(!isLocked)
+		{
+			YardCell yardCell = yardGrid.GetMouseInWhichCell();
+			if (yardCell != null)
+			{
+				//根据卡牌当前大小和cell大小计算目标坐标
+				returnTargetPosition = yardCell.GlobalPosition + (yardCell.Size - this.Size) * 0.5f;
+				isLocked = true;
+			}
+		}
 
 	}
 
@@ -140,12 +145,14 @@ public partial class CardUI : Control
 	{
 		isZooming = true;
 		isDetailMode = true;
+		GD.PrintErr("in");
 	}
 	
 	private void OnMouseExited()
 	{
 		isZooming = true;
 		isDetailMode =false;
+		GD.PrintErr("out");
 	}
 
 	private void OnGuiInput(InputEvent @event)
@@ -176,6 +183,3 @@ public partial class CardUI : Control
 	}
 
 }
-
-
-

@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://cy6qgdnqlpc5m"]
 
-[ext_resource type="Script" path="res://YardCell.cs" id="1_dgda0"]
+[ext_resource type="Script" path="res://Script/YardCell.cs" id="1_uc316"]
 
 [node name="Cell" type="AspectRatioContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_dgda0")
+script = ExtResource("1_uc316")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 2

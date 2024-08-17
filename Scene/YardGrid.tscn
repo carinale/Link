@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4beb785vjei0"]
 
-[ext_resource type="PackedScene" uid="uid://cy6qgdnqlpc5m" path="res://YardCell.tscn" id="1_0gdbb"]
-[ext_resource type="Script" path="res://YardGrid.cs" id="1_5teqq"]
+[ext_resource type="PackedScene" uid="uid://cy6qgdnqlpc5m" path="res://Scene/YardCell.tscn" id="1_0gdbb"]
+[ext_resource type="Script" path="res://Script/YardGrid.cs" id="1_5teqq"]
 
 [node name="YardGrid" type="GridContainer"]
 offset_left = 380.0

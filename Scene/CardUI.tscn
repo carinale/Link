@@ -1,0 +1,147 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck74dpa5ca2ga"]
+
+[ext_resource type="Script" path="res://Script/CardUI.cs" id="1_w66ps"]
+[ext_resource type="Texture2D" uid="uid://c0a200ulwrl1" path="res://Assets/底框.png" id="2_ivmkk"]
+[ext_resource type="Texture2D" uid="uid://djapvv6bpoi3s" path="res://Assets/临时箭头-暗.png" id="3_kvnou"]
+
+[node name="CardUI" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.9999
+offset_top = 239.0
+offset_right = 7.00006
+offset_bottom = 340.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.09372, 1.09723)
+script = ExtResource("1_w66ps")
+
+[node name="底图" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -67.0
+offset_right = 34.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("2_ivmkk")
+
+[node name="上箭头" type="TextureRect" parent="底图"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -8.0
+offset_right = 8.0
+offset_bottom = 16.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("3_kvnou")
+stretch_mode = 2
+
+[node name="右上箭头" type="TextureRect" parent="底图"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+mouse_filter = 2
+texture = ExtResource("3_kvnou")
+stretch_mode = 2
+
+[node name="右箭头" type="TextureRect" parent="底图"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_kvnou")
+stretch_mode = 2
+
+[node name="右下箭头" type="TextureRect" parent="底图"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("3_kvnou")
+stretch_mode = 2
+
+[node name="下箭头" type="TextureRect" parent="底图"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("3_kvnou")
+stretch_mode = 2
+
+[node name="左下箭头" type="TextureRect" parent="底图"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+offset_right = 16.0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("3_kvnou")
+stretch_mode = 2
+
+[node name="左箭头" type="TextureRect" parent="底图"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -8.0
+offset_right = 16.0
+offset_bottom = 8.0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_kvnou")
+stretch_mode = 2
+
+[node name="左上箭头" type="TextureRect" parent="底图"]
+layout_mode = 1
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+texture = ExtResource("3_kvnou")
+stretch_mode = 2
+
+[node name="名字" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "名字名字名字"

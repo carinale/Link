@@ -1,0 +1,111 @@
+[gd_scene load_steps=2 format=3 uid="uid://cltt710mwwsa2"]
+
+[ext_resource type="Texture2D" uid="uid://djapvv6bpoi3s" path="res://Assets/临时箭头-暗.png" id="1_jn5pv"]
+
+[node name="场地格子" type="TextureRect"]
+offset_right = 100.0
+offset_bottom = 100.0
+
+[node name="上箭头" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -8.0
+offset_right = 8.0
+offset_bottom = 16.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("1_jn5pv")
+stretch_mode = 2
+
+[node name="右上箭头" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+mouse_filter = 2
+texture = ExtResource("1_jn5pv")
+stretch_mode = 2
+
+[node name="右箭头" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_jn5pv")
+stretch_mode = 2
+
+[node name="右下箭头" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("1_jn5pv")
+stretch_mode = 2
+
+[node name="下箭头" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("1_jn5pv")
+stretch_mode = 2
+
+[node name="左下箭头" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+offset_right = 16.0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("1_jn5pv")
+stretch_mode = 2
+
+[node name="左箭头" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -8.0
+offset_right = 16.0
+offset_bottom = 8.0
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_jn5pv")
+stretch_mode = 2
+
+[node name="左上箭头" type="TextureRect" parent="."]
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+texture = ExtResource("1_jn5pv")
+stretch_mode = 2
