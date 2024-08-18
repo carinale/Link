@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://vfvtpcivu8m3"]
+[gd_scene load_steps=6 format=3 uid="uid://vfvtpcivu8m3"]
 
 [ext_resource type="Texture2D" uid="uid://c0a200ulwrl1" path="res://Assets/底框.png" id="1_k40ln"]
 [ext_resource type="Texture2D" uid="uid://djapvv6bpoi3s" path="res://Assets/临时箭头-暗.png" id="2_6ant3"]
 [ext_resource type="Script" path="res://Script/CardUI.cs" id="2_q5hpl"]
 [ext_resource type="Texture2D" uid="uid://ilnafepgsdoc" path="res://Assets/临时箭头-亮.png" id="3_v3lxp"]
+[ext_resource type="PackedScene" uid="uid://kl2o3qoma4jg" path="res://Scene/卡牌信息.tscn" id="5_6h32b"]
 
 [node name="卡牌" type="TextureRect"]
 offset_right = 80.0004
@@ -159,3 +160,16 @@ offset_left = 56.6873
 offset_top = 20.0505
 offset_right = 67.6873
 offset_bottom = 29.0505
+
+[node name="卡牌信息" parent="." instance=ExtResource("5_6h32b")]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 5.9996
+offset_top = 0.0
+offset_right = 87.9996
+offset_bottom = 67.0
+grow_horizontal = 0
+texture = ExtResource("2_6ant3")

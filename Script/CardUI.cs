@@ -3,35 +3,31 @@ using System;
 
 public partial class CardUI : TextureRect
 {
-	public Vector2 dragTargetPosition;
-	public Vector2 zoomTargetPosition;
-	public Vector2 zoomTargetSize;
-	public Vector2 returnTargetPosition;
-	public float dragSpeed = 1f;
-	public float zoomSpeed = 0.1f;
+	//坐标移动相关变量
+	public Vector2 dragTargetGlobalPosition;
+	public Vector2 returnTargetGlobalPosition;
+    public Vector2 clickPositionBias;
+    public float dragSpeed = 1f;
 	public float returnSpeed = 0.3f;
 	public float distanceAccuracy = 5.0f;
 
 
-	//卡牌目标状态 锁定 细节模式
-	public bool isLocked = false;
+    //卡牌状态
+    public bool isLocked = false;
 	public bool isDetailMode=false;
 
 	//是否在下述操作流程中
 	public bool isDragging=false;
-	public bool isZooming=false;
 	public bool isReturning = false;
 
-	public Vector2 clickPositionBias = new();
-	public Vector2 smallSize = new Vector2(100, 100);
-	public Vector2 largeSize = new Vector2(200, 200);
-	public Vector2 stayTargetPosition = new();
+	//卡牌初始化信息
+	public Vector2 initSize = new Vector2(80, 80);
 	YardGrid yardGrid;
 
 	public override void _Ready()
 	{
-		Size = smallSize;
-		returnTargetPosition = Position;
+		Size = initSize;
+		returnTargetGlobalPosition = GlobalPosition;
 		MouseEntered += OnMouseEntered;
 		MouseExited += OnMouseExited;
 		GuiInput += OnGuiInput;
@@ -46,11 +42,14 @@ public partial class CardUI : TextureRect
 			if (!isLocked)
 			{
 				DragCard();
-			}
+				HideDetailInfo();
+
+            }
 		}
 		else if (isReturning)
 		{
-			if(Position.IsEqualApprox(returnTargetPosition))
+            HideDetailInfo();
+            if (Position.IsEqualApprox(returnTargetGlobalPosition))
 			{
 				isReturning = false;
 			}
@@ -60,61 +59,48 @@ public partial class CardUI : TextureRect
 			}
 
 		}
-		else if (isZooming) 
+		else  
 		{
-			ZoomCard();
-			if (Position.IsEqualApprox(zoomTargetPosition))
+			if(isDetailMode)
 			{
-				isZooming = false;
-			}						
-		}
+				ShowDetailInfo();
+			}
+			else
+			{
+				HideDetailInfo();
+			}
+
+        }
 	}
 
-
-	//卡牌拖动
-	public void DragCard()
+	public void ShowDetailInfo()
 	{
-		dragTargetPosition = GetGlobalMousePosition() - clickPositionBias;
-		Position = Position.Lerp(dragTargetPosition, dragSpeed);
+		GetNode<Control>("卡牌信息").Visible = true;
 	}
 
-	public void ZoomCard()
+    public void HideDetailInfo()
+    {
+        GetNode<Control>("卡牌信息").Visible = false;
+    }
+
+    //卡牌拖动
+    public void DragCard()
 	{
-		if (isDetailMode)
-		{
-			zoomTargetPosition = Position - (largeSize - Size) * 0.5f;
-			zoomTargetSize = largeSize;
-		}
-		else
-		{
-			zoomTargetPosition = Position + (Size - smallSize) * 0.5f;
-			zoomTargetSize = smallSize;
-		}
-
-		if (Position.DistanceTo(zoomTargetPosition) <= distanceAccuracy) 
-		{
-			Position = zoomTargetPosition;
-			Size = zoomTargetSize;
-
-		}
-		else
-		{
-			Position = Position.Lerp(zoomTargetPosition, zoomSpeed);
-			Size = Size.Lerp(zoomTargetSize, zoomSpeed);
-		}
-
-
+		dragTargetGlobalPosition = GetGlobalMousePosition() - clickPositionBias;
+		GlobalPosition = GlobalPosition.Lerp(dragTargetGlobalPosition, dragSpeed);
 	}
+
+	
 
 	public void ReturnCard()
 	{
-		if (Position.DistanceTo(returnTargetPosition) <= distanceAccuracy)
+		if (GlobalPosition.DistanceTo(returnTargetGlobalPosition) < distanceAccuracy)
 		{
-			Position=returnTargetPosition;
+            GlobalPosition = returnTargetGlobalPosition;
 		}
 		else
 		{
-			Position = Position.Lerp(returnTargetPosition, returnSpeed);
+            GlobalPosition = GlobalPosition.Lerp(returnTargetGlobalPosition, returnSpeed);
 		}
 
 	}
@@ -133,7 +119,7 @@ public partial class CardUI : TextureRect
 			if (yardCell != null)
 			{
 				//根据卡牌当前大小和cell大小计算目标坐标
-				returnTargetPosition = yardCell.GlobalPosition + (yardCell.Size - this.Size) * 0.5f;
+				returnTargetGlobalPosition = yardCell.GlobalPosition + (yardCell.Size - this.Size) * 0.5f;
 				isLocked = true;
 			}
 		}
@@ -143,14 +129,12 @@ public partial class CardUI : TextureRect
 
 	private void OnMouseEntered()
 	{
-		isZooming = true;
 		isDetailMode = true;
 		GD.PrintErr("in");
 	}
 	
 	private void OnMouseExited()
 	{
-		isZooming = true;
 		isDetailMode =false;
 		GD.PrintErr("out");
 	}

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://kl2o3qoma4jg"]
+
+[node name="卡牌信息" type="TextureRect"]
+offset_left = 93.0
+offset_top = 7.0
+offset_right = 175.0
+offset_bottom = 74.0
