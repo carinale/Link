@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class CardUI : Control
+public partial class CardUI : TextureRect
 {
 	public Vector2 dragTargetPosition;
 	public Vector2 zoomTargetPosition;
@@ -35,7 +35,7 @@ public partial class CardUI : Control
 		MouseEntered += OnMouseEntered;
 		MouseExited += OnMouseExited;
 		GuiInput += OnGuiInput;
-		yardGrid = GetNode<YardGrid>("/root/BattleScene/场地");
+		yardGrid = GetNodeOrNull<YardGrid>("/root/战斗场景/场地网格");
 	}
 
 

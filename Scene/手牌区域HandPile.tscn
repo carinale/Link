@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dasyq0gt2tn5r"]
+
+[ext_resource type="Script" path="res://Script/HandPile.cs" id="1_1fbaw"]
+[ext_resource type="PackedScene" uid="uid://vfvtpcivu8m3" path="res://Scene/卡牌CardUI.tscn" id="2_dxc8a"]
+
+[node name="手牌区域" type="TextureRect"]
+offset_left = 128.0
+offset_top = 119.0
+offset_right = 832.0
+offset_bottom = 196.0
+stretch_mode = 3
+script = ExtResource("1_1fbaw")
+
+[node name="卡牌" parent="." instance=ExtResource("2_dxc8a")]
+layout_mode = 0
+
+[node name="卡牌2" parent="." instance=ExtResource("2_dxc8a")]
+layout_mode = 0
+
+[node name="卡牌3" parent="." instance=ExtResource("2_dxc8a")]
+layout_mode = 0
+
+[node name="卡牌4" parent="." instance=ExtResource("2_dxc8a")]
+layout_mode = 0
