@@ -1,25 +1,45 @@
 using Godot;
 using System;
 
-public partial class YardGrid : GridContainer
+public partial class YardGrid : TextureRect
 {
+	public YardCell[] arrYardCell;
+	public int rows=6, columns=5;
+	public Vector2 cellSize = new(100, 100);
 	//public YardCell[] arrYardCells;
 
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		//arrYardCells = new YardCell[GetChildCount()];
-  //      for (int i = 0; i < GetChildCount(); i++)
-  //      {
-		//	arrYardCells[i] = GetChild<YardCell>(i);
-  //      }
+		//初始化
+		arrYardCell = new YardCell[GetChildCount()];
+		for (int i = 0; i < GetChildCount(); i++)
+		{
+			arrYardCell[i] = GetChild<YardCell>(i);
+			arrYardCell[i].SetAnchorsAndOffsetsPreset(LayoutPreset.TopLeft);
+			arrYardCell[i].Size = cellSize;
 
-		////CellGlobalRect =new Rect2[GetChildCount()];
-		////for (int i = 0; i < CellGlobalRect.Length; i++)
-		////{
-		////	CellGlobalRect[i]=this.GetChild<YardCell>(i).GetGlobalRect();
-		////}
+		}
+		Size=new Vector2 (100*rows, 100*columns);
+		
+		Vector2 cellPosition= new(0,0);
+		for (int i = 0;i < arrYardCell.Length;i++)
+		{
+
+			arrYardCell[i].Position= cellPosition;
+			cellPosition.X += cellSize.X;
+			if(Math.Abs(cellPosition.X- cellSize.X*columns) <1f)
+			{
+				cellPosition.X = 0f;
+				cellPosition.Y += cellSize.Y;
+
+			}
+
+
+		}
+
+		GD.PrintErr(arrYardCell[0].Size);
 
 	}
 

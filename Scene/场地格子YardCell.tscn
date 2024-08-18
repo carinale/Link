@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cltt710mwwsa2"]
+[gd_scene load_steps=3 format=3 uid="uid://cltt710mwwsa2"]
 
 [ext_resource type="Texture2D" uid="uid://djapvv6bpoi3s" path="res://Assets/临时箭头-暗.png" id="1_jn5pv"]
+[ext_resource type="Script" path="res://Script/YardCell.cs" id="1_unkra"]
 
 [node name="场地格子" type="TextureRect"]
 offset_right = 100.0
 offset_bottom = 100.0
+script = ExtResource("1_unkra")
 
 [node name="上箭头" type="TextureRect" parent="."]
 layout_mode = 1
@@ -104,6 +106,7 @@ texture = ExtResource("1_jn5pv")
 stretch_mode = 2
 
 [node name="左上箭头" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 16.0
 offset_bottom = 16.0
 mouse_filter = 2

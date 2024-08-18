@@ -11,14 +11,17 @@ config_version=5
 [application]
 
 config/name="Link"
-run/main_scene="res://Scene/战斗场景BattleScene.tscn"
+run/main_scene="res://Scene/场地网格YardGrid.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
+
+[debug]
+
+file_logging/enable_file_logging.pc=false
 
 [display]
 
 window/size/viewport_width=1366
 window/size/viewport_height=768
-window/size/initial_position_type=0
 window/stretch/mode="viewport"
 
 [dotnet]

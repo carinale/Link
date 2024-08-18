@@ -1,17 +1,27 @@
 using Godot;
 using System;
 
-public partial class YardCell : Control
+public partial class YardCell : TextureRect
 {
-	public bool isEmpty = true;
-	public bool canBeSet = true;
-	public bool isMouseInCell = false;
-	public CardUI cardUI;
-
+	public bool isHaveCard;
+	public bool isActive;
+	public TextureRect upLink,downLink, leftLink, rightLink;
+	public TextureRect leftUpLink, leftDownLink, rightUpLink, rightDownLink;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		upLink = GetNode<TextureRect>("上箭头");
+		downLink = GetNode<TextureRect>("下箭头");
+		leftLink = GetNode<TextureRect>("左箭头");
+		rightLink = GetNode<TextureRect>("右箭头");
+		leftUpLink= GetNode<TextureRect>("左上箭头");
+		leftDownLink = GetNode<TextureRect>("左下箭头");
+		rightUpLink = GetNode<TextureRect>("右上箭头");
+		rightDownLink = GetNode<TextureRect>("右下箭头");
+		isHaveCard = false;
+		isActive = false;
+
 
 	}
 
