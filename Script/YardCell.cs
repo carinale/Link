@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Runtime.CompilerServices;
 
 public partial class YardCell : TextureRect
 {
@@ -20,8 +21,7 @@ public partial class YardCell : TextureRect
 		rightUpLink = GetNode<TextureRect>("右上箭头");
 		rightDownLink = GetNode<TextureRect>("右下箭头");
 		isHaveCard = false;
-		isActive = false;
-
+		isActive = true;
 
 	}
 
@@ -30,5 +30,23 @@ public partial class YardCell : TextureRect
 	{
 		
 	}
+
+	public void TrySetCard(CardUI card)
+	{
+        if (isActive && !isHaveCard)
+		{
+			if (card.isCanBeUsed)
+			{
+                card.moveTargetGlobalPosition = GlobalPosition + (Size - card.Size) * 0.5f;
+				isHaveCard=true;
+                card.isCanBeUsed=false;
+                GD.Print("succes to set card");
+				return;
+            }
+
+		}
+		GD.Print("fail to set card");
+
+    }
 
 }

@@ -5,33 +5,36 @@ public partial class CardUI : TextureRect
 {
 	//坐标移动相关变量
 	public Vector2 dragTargetGlobalPosition;
-	public Vector2 returnTargetGlobalPosition;
+	public Vector2 moveTargetGlobalPosition;
     public Vector2 clickPositionBias;
     public float dragSpeed = 1f;
-	public float returnSpeed = 0.3f;
+	public float moveSpeed = 0.3f;
 	public float distanceAccuracy = 5.0f;
 
 
     //卡牌状态
-    public bool isLocked = false;
+    public bool isCanBeUsed = true; //是否能够放在场地上
 	public bool isDetailMode=false;
 
 	//是否在下述操作流程中
-	public bool isDragging=false;
-	public bool isReturning = false;
+	public bool isDragging = false;
+	public bool isMoving = false;
+
+	public BattleScene battleScene;
 
 	//卡牌初始化信息
 	public Vector2 initSize = new Vector2(80, 80);
-	YardGrid yardGrid;
+
+
 
 	public override void _Ready()
 	{
 		Size = initSize;
-		returnTargetGlobalPosition = GlobalPosition;
-		MouseEntered += OnMouseEntered;
+		SetMoveTarget();
+		battleScene = GetNode<BattleScene>(NodePathString.battleScene);
+        MouseEntered += OnMouseEntered;
 		MouseExited += OnMouseExited;
 		GuiInput += OnGuiInput;
-		yardGrid = GetNodeOrNull<YardGrid>("/root/战斗场景/场地网格");
 	}
 
 
@@ -39,23 +42,23 @@ public partial class CardUI : TextureRect
 	{
 		if (isDragging)
 		{
-			if (!isLocked)
+			if (isCanBeUsed)
 			{
 				DragCard();
 				HideDetailInfo();
 
             }
 		}
-		else if (isReturning)
+		else if (isMoving)
 		{
             HideDetailInfo();
-            if (Position.IsEqualApprox(returnTargetGlobalPosition))
+            if (Position.IsEqualApprox(moveTargetGlobalPosition))
 			{
-				isReturning = false;
+				isMoving = false;
 			}
 			else
 			{
-				ReturnCard();
+				MoveCard();
 			}
 
 		}
@@ -72,6 +75,7 @@ public partial class CardUI : TextureRect
 
         }
 	}
+
 
 	public void ShowDetailInfo()
 	{
@@ -91,40 +95,63 @@ public partial class CardUI : TextureRect
 	}
 
 	
-
-	public void ReturnCard()
+	public void MoveCard()
 	{
-		if (GlobalPosition.DistanceTo(returnTargetGlobalPosition) < distanceAccuracy)
+		if (GlobalPosition.DistanceTo(moveTargetGlobalPosition) < distanceAccuracy)
 		{
-            GlobalPosition = returnTargetGlobalPosition;
+            GlobalPosition = moveTargetGlobalPosition;
 		}
 		else
 		{
-            GlobalPosition = GlobalPosition.Lerp(returnTargetGlobalPosition, returnSpeed);
+            GlobalPosition = GlobalPosition.Lerp(moveTargetGlobalPosition, moveSpeed);
 		}
 
 	}
 
-
-	//根据当前状态设置停靠的目标点
-	public void SetReturnTargetPostion()
+	public void SetMoveTarget()
 	{
-		if (yardGrid==null)
-		{
-			return;
-		}
-		if(!isLocked)
-		{
-			YardCell yardCell = yardGrid.GetMouseInWhichCell();
-			if (yardCell != null)
-			{
-				//根据卡牌当前大小和cell大小计算目标坐标
-				returnTargetGlobalPosition = yardCell.GlobalPosition + (yardCell.Size - this.Size) * 0.5f;
-				isLocked = true;
-			}
-		}
+        moveTargetGlobalPosition = GlobalPosition;
+    }
 
+	//检测卡牌是否能够使用
+	public bool CanCardBeUsed()
+	{
+		if(isCanBeUsed)
+		{
+			return true;
+		}
+		return false;
 	}
+
+	//尝试将卡牌放置在当前鼠标位置的场地中
+	public void TrySetCardInYard()
+	{
+		if(CanCardBeUsed())
+		{
+			if(battleScene!=null)
+			{
+				YardCell yardCell = battleScene.yardGrid.GetMouseInWhichCell();
+				if(yardCell != null)
+				{
+                    if (yardCell.isActive && !yardCell.isHaveCard)
+					{
+                        moveTargetGlobalPosition = yardCell.GlobalPosition + (yardCell.Size - this.Size) * 0.5f;
+                        isCanBeUsed = true;//后续修改成枚举
+                        yardCell.isHaveCard=true;//后续直接引用
+						ChangeCardPile(battleScene.yardPile);
+                    }
+
+                }
+            }
+		}
+	}
+
+	public void ChangeCardPile(CardPile targetCardPile)
+	{
+		CardPile nowCardPile = GetParent<CardPile>();
+		nowCardPile.MoveCardTo(this, targetCardPile);
+    }
+
 
 
 	private void OnMouseEntered()
@@ -139,7 +166,7 @@ public partial class CardUI : TextureRect
 		GD.PrintErr("out");
 	}
 
-	private void OnGuiInput(InputEvent @event)
+	public void OnGuiInput(InputEvent @event)
 	{
 		if(@event is InputEventMouseButton mouseEvent )
 		{
@@ -152,14 +179,12 @@ public partial class CardUI : TextureRect
 				}
 				else
 				{
-					//拖动终止 开始返回
+					//拖动终止
 					isDragging=false;
-					isReturning = true;
-					isDetailMode = false;
-					//设置卡牌返回目标坐标点
-					SetReturnTargetPostion();
+					isMoving = true;
 
-
+                    TrySetCardInYard();
+					
 				}				
 			}
 

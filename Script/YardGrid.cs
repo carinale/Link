@@ -35,12 +35,7 @@ public partial class YardGrid : TextureRect
 				cellPosition.Y += cellSize.Y;
 
 			}
-
-
 		}
-
-		GD.PrintErr(arrYardCell[0].Size);
-
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -54,6 +49,7 @@ public partial class YardGrid : TextureRect
 		Vector2 globalMousePosition=GetGlobalMousePosition();
 		for (int i = 0; i < GetChildCount(); i++)
 		{
+			Rect2 re = GetChild<YardCell>(i).GetGlobalRect();
 			if (GetChild<YardCell>(i).GetGlobalRect().HasPoint(globalMousePosition))
 			{
 				return GetChild<YardCell>(i);
