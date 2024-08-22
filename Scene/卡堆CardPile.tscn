@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bst7622nt4lra"]
+
+[ext_resource type="Script" path="res://Script/BattleScene/CardPile.cs" id="1_j1bp4"]
+
+[node name="卡堆" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_j1bp4")

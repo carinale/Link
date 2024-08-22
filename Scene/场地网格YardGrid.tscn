@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://drd4jbtrugqk4"]
 
 [ext_resource type="PackedScene" uid="uid://cltt710mwwsa2" path="res://Scene/场地格子YardCell.tscn" id="1_j8ywa"]
-[ext_resource type="Script" path="res://Script/YardGrid.cs" id="1_kpbq2"]
+[ext_resource type="Script" path="res://Script/BattleScene/YardGrid.cs" id="1_kpbq2"]
 
 [node name="场地网格" type="TextureRect"]
 offset_left = 381.0

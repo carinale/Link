@@ -20,18 +20,18 @@ public partial class CardUI : TextureRect
 	public bool isDragging = false;
 	public bool isMoving = false;
 
-	public BattleScene battleScene;
-
 	//卡牌初始化信息
 	public Vector2 initSize = new Vector2(80, 80);
 
+
+	//卡牌使用信号
+	[Signal]
+	public delegate void CardStopDragEventHandler();
 
 
 	public override void _Ready()
 	{
 		Size = initSize;
-		SetMoveTarget();
-		battleScene = GetNode<BattleScene>(NodePathString.battleScene);
         MouseEntered += OnMouseEntered;
 		MouseExited += OnMouseExited;
 		GuiInput += OnGuiInput;
@@ -46,13 +46,12 @@ public partial class CardUI : TextureRect
 			{
 				DragCard();
 				HideDetailInfo();
-
             }
 		}
 		else if (isMoving)
 		{
             HideDetailInfo();
-            if (Position.IsEqualApprox(moveTargetGlobalPosition))
+            if (GlobalPosition.IsEqualApprox(moveTargetGlobalPosition))
 			{
 				isMoving = false;
 			}
@@ -72,7 +71,6 @@ public partial class CardUI : TextureRect
 			{
 				HideDetailInfo();
 			}
-
         }
 	}
 
@@ -95,6 +93,7 @@ public partial class CardUI : TextureRect
 	}
 
 	
+	//卡牌自动移动到目标点
 	public void MoveCard()
 	{
 		if (GlobalPosition.DistanceTo(moveTargetGlobalPosition) < distanceAccuracy)
@@ -124,46 +123,39 @@ public partial class CardUI : TextureRect
 	}
 
 	//尝试将卡牌放置在当前鼠标位置的场地中
-	public void TrySetCardInYard()
-	{
-		if(CanCardBeUsed())
-		{
-			if(battleScene!=null)
-			{
-				YardCell yardCell = battleScene.yardGrid.GetMouseInWhichCell();
-				if(yardCell != null)
-				{
-                    if (yardCell.isActive && !yardCell.isHaveCard)
-					{
-                        moveTargetGlobalPosition = yardCell.GlobalPosition + (yardCell.Size - this.Size) * 0.5f;
-                        isCanBeUsed = true;//后续修改成枚举
-                        yardCell.isHaveCard=true;//后续直接引用
-						ChangeCardPile(battleScene.yardPile);
-                    }
+	//public void TrySetCardInYard()
+	//{
+	//	if(CanCardBeUsed())
+	//	{
+	//		if(battleScene!=null)
+	//		{
+	//			YardCell yardCell = battleScene.yardGrid.GetMouseInWhichCell();
+	//			if(yardCell != null)
+	//			{
+ //                   if (yardCell.isActive && !yardCell.isHaveCard)
+	//				{
+ //                       moveTargetGlobalPosition = yardCell.GlobalPosition + (yardCell.Size - this.Size) * 0.5f;
+ //                       isCanBeUsed = true;//后续修改成枚举
+ //                       yardCell.isHaveCard=true;//后续直接引用
+	//					//ChangeCardPile(battleScene.yardPile);
+ //                   }
 
-                }
-            }
-		}
-	}
+ //               }
+ //           }
+	//	}
+	//}
 
-	public void ChangeCardPile(CardPile targetCardPile)
-	{
-		CardPile nowCardPile = GetParent<CardPile>();
-		nowCardPile.MoveCardTo(this, targetCardPile);
-    }
 
 
 
 	private void OnMouseEntered()
 	{
 		isDetailMode = true;
-		GD.PrintErr("in");
 	}
 	
 	private void OnMouseExited()
 	{
 		isDetailMode =false;
-		GD.PrintErr("out");
 	}
 
 	public void OnGuiInput(InputEvent @event)
@@ -182,13 +174,9 @@ public partial class CardUI : TextureRect
 					//拖动终止
 					isDragging=false;
 					isMoving = true;
-
-                    TrySetCardInYard();
-					
-				}				
+					EmitSignal(nameof(CardStopDrag));
+                }				
 			}
-
 		}
 	}
-
 }

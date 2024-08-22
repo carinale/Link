@@ -38,6 +38,8 @@ public partial class YardGrid : TextureRect
 		}
 	}
 
+	public int count = 0;
+
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
@@ -47,6 +49,7 @@ public partial class YardGrid : TextureRect
 	public YardCell GetMouseInWhichCell()
 	{
 		Vector2 globalMousePosition=GetGlobalMousePosition();
+		GD.PrintErr(globalMousePosition);
 		for (int i = 0; i < GetChildCount(); i++)
 		{
 			Rect2 re = GetChild<YardCell>(i).GetGlobalRect();

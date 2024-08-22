@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhrpsfbcdvi4i"]
+
+[ext_resource type="Script" path="res://Script/BattleScene/Zone/GraveZone.cs" id="1_jae5u"]
+
+[node name="墓地区域" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_jae5u")
