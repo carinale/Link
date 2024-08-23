@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\carin\\Documents\\GitHub\\Link\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\deckzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\deckzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\battlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\battlescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\handzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\handzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\yardcellzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\yardcellzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\yardzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\yardzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\gravezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\gravezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\battlescenezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\battlescenezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\cardui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\cardui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\cardpile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,8 +23,28 @@
       "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\yardgrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\cardui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\cardui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\yardcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\yardcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\battlescenecardzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\battlescenecardzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\banishzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\banishzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\handzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\handzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\gravezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\gravezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|c:\\users\\carin\\documents\\github\\link\\script\\battlescene\\zone\\deckzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F77ABF1-ED55-4D3A-8CC0-9082512C80C8}|Link.csproj|solutionrelative:script\\battlescene\\zone\\deckzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,108 +54,147 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "YardCell.cs",
+              "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\YardCell.cs",
+              "RelativeDocumentMoniker": "Script\\BattleScene\\YardCell.cs",
+              "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\YardCell.cs",
+              "RelativeToolTip": "Script\\BattleScene\\YardCell.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwA0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T13:13:29.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BanishZone.cs",
+              "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\BanishZone.cs",
+              "RelativeDocumentMoniker": "Script\\BattleScene\\Zone\\BanishZone.cs",
+              "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\BanishZone.cs",
+              "RelativeToolTip": "Script\\BattleScene\\Zone\\BanishZone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T13:04:02.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BattleScene.cs",
+              "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\BattleScene.cs",
+              "RelativeDocumentMoniker": "Script\\BattleScene\\BattleScene.cs",
+              "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\BattleScene.cs",
+              "RelativeToolTip": "Script\\BattleScene\\BattleScene.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAwCoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T13:27:40.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "DeckZone.cs",
               "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\DeckZone.cs",
               "RelativeDocumentMoniker": "Script\\BattleScene\\Zone\\DeckZone.cs",
               "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\DeckZone.cs",
               "RelativeToolTip": "Script\\BattleScene\\Zone\\DeckZone.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAIwDIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T13:23:55.577Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "CardPile.cs",
               "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\CardPile.cs",
               "RelativeDocumentMoniker": "Script\\BattleScene\\CardPile.cs",
               "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\CardPile.cs",
               "RelativeToolTip": "Script\\BattleScene\\CardPile.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAQwDwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAQwDkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T13:08:19.86Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "YardZone.cs",
-              "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\YardZone.cs",
-              "RelativeDocumentMoniker": "Script\\BattleScene\\Zone\\YardZone.cs",
-              "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\YardZone.cs",
-              "RelativeToolTip": "Script\\BattleScene\\Zone\\YardZone.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "YardCellZone.cs",
+              "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\YardCellZone.cs",
+              "RelativeDocumentMoniker": "Script\\BattleScene\\Zone\\YardCellZone.cs",
+              "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\YardCellZone.cs",
+              "RelativeToolTip": "Script\\BattleScene\\Zone\\YardCellZone.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T12:54:05.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "GraveZone.cs",
               "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\GraveZone.cs",
               "RelativeDocumentMoniker": "Script\\BattleScene\\Zone\\GraveZone.cs",
               "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\GraveZone.cs",
               "RelativeToolTip": "Script\\BattleScene\\Zone\\GraveZone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T12:53:21.803Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "YardGrid.cs",
               "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\YardGrid.cs",
               "RelativeDocumentMoniker": "Script\\BattleScene\\YardGrid.cs",
               "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\YardGrid.cs",
               "RelativeToolTip": "Script\\BattleScene\\YardGrid.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAwDcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T12:52:27.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BattleSceneZone.cs",
-              "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\BattleSceneZone.cs",
-              "RelativeDocumentMoniker": "Script\\BattleScene\\Zone\\BattleSceneZone.cs",
-              "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\BattleSceneZone.cs",
-              "RelativeToolTip": "Script\\BattleScene\\Zone\\BattleSceneZone.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAwDoAAAARAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "BattleSceneCardZone.cs",
+              "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\BattleSceneCardZone.cs",
+              "RelativeDocumentMoniker": "Script\\BattleScene\\Zone\\BattleSceneCardZone.cs",
+              "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\BattleSceneCardZone.cs",
+              "RelativeToolTip": "Script\\BattleScene\\Zone\\BattleSceneCardZone.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAADwv10AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T12:45:21.825Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "HandZone.cs",
               "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\HandZone.cs",
               "RelativeDocumentMoniker": "Script\\BattleScene\\Zone\\HandZone.cs",
               "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\Zone\\HandZone.cs",
               "RelativeToolTip": "Script\\BattleScene\\Zone\\HandZone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAmwDUAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T12:41:51.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "CardUI.cs",
               "DocumentMoniker": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\CardUI.cs",
               "RelativeDocumentMoniker": "Script\\BattleScene\\CardUI.cs",
               "ToolTip": "C:\\Users\\carin\\Documents\\GitHub\\Link\\Script\\BattleScene\\CardUI.cs",
               "RelativeToolTip": "Script\\BattleScene\\CardUI.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAADwv7QAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAKMAAAAAAAAAAADwv6oAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T10:56:18.439Z",
               "EditorCaption": ""

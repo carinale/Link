@@ -1,7 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cltt710mwwsa2"]
+[gd_scene load_steps=12 format=3 uid="uid://cltt710mwwsa2"]
 
-[ext_resource type="Script" path="res://Script/BattleScene/YardCell.cs" id="1_unkra"]
 [ext_resource type="Texture2D" uid="uid://bsiqsd0127f4g" path="res://Assets/Sprite-0001.png" id="1_workf"]
+[ext_resource type="Script" path="res://Script/BattleScene/Zone/YardCellZone.cs" id="2_p0ec3"]
 [ext_resource type="Texture2D" uid="uid://r8dw7ushjyvt" path="res://Assets/arrow_active_1.png" id="3_h5503"]
 [ext_resource type="Texture2D" uid="uid://tmltequ1lb6m" path="res://Assets/arrow_active_2.png" id="4_yh6bi"]
 [ext_resource type="Texture2D" uid="uid://bevqc7c6einma" path="res://Assets/arrow_active_3.png" id="5_ri2xk"]
@@ -10,12 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://dv78ear3nn7s4" path="res://Assets/arrow_active_6.png" id="8_j3sne"]
 [ext_resource type="Texture2D" uid="uid://lm0igviist5n" path="res://Assets/arrow_active_7.png" id="9_2n0nk"]
 [ext_resource type="Texture2D" uid="uid://ce1s03id7ak65" path="res://Assets/arrow_active_8.png" id="10_27hhv"]
+[ext_resource type="PackedScene" uid="uid://bst7622nt4lra" path="res://Scene/卡堆CardPile.tscn" id="11_xpsc0"]
 
 [node name="场地格子" type="TextureRect"]
 offset_right = 100.0
 offset_bottom = 100.0
 texture = ExtResource("1_workf")
-script = ExtResource("1_unkra")
+script = ExtResource("2_p0ec3")
 
 [node name="上箭头" type="TextureRect" parent="."]
 layout_mode = 1
@@ -121,3 +122,5 @@ offset_bottom = 11.0
 mouse_filter = 2
 texture = ExtResource("10_27hhv")
 stretch_mode = 2
+
+[node name="卡堆" parent="." instance=ExtResource("11_xpsc0")]

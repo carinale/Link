@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c760n4k7phvgr"]
+
+[ext_resource type="Script" path="res://Script/BattleScene/Zone/BanishZone.cs" id="1_qhfwy"]
+[ext_resource type="PackedScene" uid="uid://bst7622nt4lra" path="res://Scene/卡堆CardPile.tscn" id="2_jgktr"]
+
+[node name="除外区域" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qhfwy")
+
+[node name="卡堆" parent="." instance=ExtResource("2_jgktr")]

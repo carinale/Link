@@ -1,7 +1,7 @@
-﻿using Godot;
+using Godot;
 using System;
 
-public partial class HandZone : BattleSceneZone
+public partial class HandZone : BattleSceneCardZone
 {
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -11,18 +11,6 @@ public partial class HandZone : BattleSceneZone
 
 	public override void InitState()
 	{
-
-		PackedScene scene = GD.Load<PackedScene>("res://Scene/卡牌CardUI.tscn");
-		if (scene != null)
-		{
-			for (int i = 0; i < 5; i++)
-			{
-				CardUI instance = scene.Instantiate<CardUI>();
-				instance.Name = "Card" + i.ToString();
-				cardPile.AddChild(instance);
-			}
-		}
-
 		SetCardPosition();
 	}
 
@@ -50,14 +38,20 @@ public partial class HandZone : BattleSceneZone
 
 	//移动卡牌节点位置
 	//绑定信号
+
+	//card.CardStopDrag += battleScene.yardZone.TryAddCardToYard;
+				//card.CardStopDrag -= battleScene.yardZone.TryAddCardToYard;
+	//刷新ui
 	protected override void AddCard(CardUI card)
 	{
-		card.CardStopDrag += battleScene.yardZone.TryAddCardToYard;
+		card.Visible = true;
+		RefreshState();
+
 	}
 
 	protected override void RemoveCard(CardUI card)
 	{
-		card.CardStopDrag -= battleScene.yardZone.TryAddCardToYard;
+		RefreshState();
 	}
 
 

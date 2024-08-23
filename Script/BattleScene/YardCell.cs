@@ -33,20 +33,20 @@ public partial class YardCell : TextureRect
 
 	public void TrySetCard(CardUI card)
 	{
-        if (isActive && !isHaveCard)
+		if (isActive && !isHaveCard)
 		{
 			if (card.isCanBeUsed)
 			{
-                card.moveTargetGlobalPosition = GlobalPosition + (Size - card.Size) * 0.5f;
+				card.moveTargetGlobalPosition = GlobalPosition + (Size - card.Size) * 0.5f;
 				isHaveCard=true;
-                card.isCanBeUsed=false;
-                GD.Print("succes to set card");
+				card.isCanBeUsed=false;
+				GD.Print("succes to set card");
 				return;
-            }
+			}
 
 		}
 		GD.Print("fail to set card");
 
-    }
+	}
 
 }

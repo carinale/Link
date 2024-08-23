@@ -1,7 +1,7 @@
-﻿using Godot;
+using Godot;
 using System;
 
-public partial class BattleSceneZone : TextureRect
+public abstract partial class BattleSceneCardZone : TextureRect
 {
 	public CardPile cardPile=null;
 	public BattleScene battleScene=null;
@@ -11,9 +11,9 @@ public partial class BattleSceneZone : TextureRect
 	{
 		cardPile=GetCardPileInZone();
 		battleScene = GetNode<BattleScene>("/root/战斗场景");
-        InitState();
+		InitState();
 
-    }
+	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
@@ -38,8 +38,7 @@ public partial class BattleSceneZone : TextureRect
 			{
 				return GetChildOrNull<CardPile>(i);
 
-            }
-
+			}
 		}
 		return null;
 	}
@@ -51,37 +50,50 @@ public partial class BattleSceneZone : TextureRect
 			CardUI card = cardPile.GetChildOrNull<CardUI>(i);
 			if (card != null) 
 			{
-                card.moveTargetGlobalPosition = card.GlobalPosition;
-            }	
+				card.moveTargetGlobalPosition = card.GlobalPosition;
+			}	
 		}
 	}
 
 	//不处理节点移动，处理其他任务
-	protected virtual void AddCard(CardUI card)
-	{
+	protected abstract void AddCard(CardUI card);
 
-	}
-    protected virtual void RemoveCard(CardUI card)
-	{
+	protected abstract void RemoveCard(CardUI card);
 
-	}
 	
 
 
-    public void MoveCardTo(CardUI card, BattleSceneZone targetZone)
+	public void MoveCardTo(CardUI card, BattleSceneCardZone targetZone)
 	{
-		if(this.cardPile.ContainCard(card))
+		if(card== null || targetZone==null)
 		{
-            RemoveCard(card);
-            targetZone.AddCard(card);
+			GD.PrintErr("MoveCardTo参数为null");
+			return;
+
+		}
+
+		if (this.cardPile.ContainCard(card))
+		{
+			//移动节点
 			this.cardPile.MoveCardTo(card, targetZone.cardPile);
-        }
+			//处理ui
+			this.RemoveCard(card);
+			targetZone.AddCard(card);
+
+		}
 		else
 		{
 			GD.PrintErr(Name+"not have"+card.Name);
 		}
-
 	}
 
+	public CardUI GetCardInZone()
+	{
+		if(cardPile!=null)
+		{
+			return cardPile.GetCardInPile();
+		}
+		return null;
+	}
 
 }

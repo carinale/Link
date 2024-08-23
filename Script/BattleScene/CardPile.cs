@@ -7,19 +7,6 @@ using System.Collections.Generic;
 public partial class CardPile : Control
 {
 
-	//public enum PILETYPE
-	//{
-	//	Deck=1,
-	//	Hand,
-	//	Yard,
-	//	Grave,
-	//	Banish,
-	//}
-
-	//public PILETYPE PileType;
-	// Called when the node enters the scene tree for the first time.
-
-
 	public void AddCard(CardUI card)
 	{
 		
@@ -53,8 +40,9 @@ public partial class CardPile : Control
 	{
 		if (ContainCard(card) && !cardPile.ContainCard(card))
 		{
-			cardPile.AddCard(card);
 			this.RemoveCard(card);
+			cardPile.AddCard(card);
+
 		}
 		else
 		{
@@ -65,9 +53,12 @@ public partial class CardPile : Control
 	public bool ContainCard(CardUI card)
 	{
 		return IsAncestorOf(card);
-
 	}
 
+	public CardUI GetCardInPile()
+	{
+		return GetChildOrNull<CardUI>(0);
+	}
 
 
 

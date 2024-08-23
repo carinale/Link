@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bin48ybbcm8d5"]
+
+[ext_resource type="PackedScene" uid="uid://drd4jbtrugqk4" path="res://Scene/场地网格YardGrid.tscn" id="2_5wpc4"]
+
+[node name="场地区域" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="场地网格" parent="." instance=ExtResource("2_5wpc4")]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 41.0
+offset_right = 783.0
+offset_bottom = 641.0

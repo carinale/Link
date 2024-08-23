@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dasyq0gt2tn5r"]
+[gd_scene load_steps=3 format=3 uid="uid://dasyq0gt2tn5r"]
 
 [ext_resource type="Script" path="res://Script/BattleScene/Zone/HandZone.cs" id="1_jksbl"]
+[ext_resource type="PackedScene" uid="uid://bst7622nt4lra" path="res://Scene/卡堆CardPile.tscn" id="2_x27gj"]
 
 [node name="手牌区域" type="TextureRect"]
 offset_left = 128.0
@@ -9,3 +10,5 @@ offset_right = 832.0
 offset_bottom = 196.0
 stretch_mode = 3
 script = ExtResource("1_jksbl")
+
+[node name="卡堆" parent="." instance=ExtResource("2_x27gj")]

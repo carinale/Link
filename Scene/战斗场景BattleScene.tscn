@@ -1,13 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b8wlqptxkvotv"]
+[gd_scene load_steps=7 format=3 uid="uid://b8wlqptxkvotv"]
 
 [ext_resource type="Script" path="res://Script/BattleScene/BattleScene.cs" id="1_jsmya"]
-[ext_resource type="PackedScene" uid="uid://drd4jbtrugqk4" path="res://Scene/场地网格YardGrid.tscn" id="1_stogy"]
 [ext_resource type="PackedScene" uid="uid://dasyq0gt2tn5r" path="res://Scene/手牌区域HandZone.tscn" id="2_o7pim"]
-[ext_resource type="PackedScene" uid="uid://bin48ybbcm8d5" path="res://Scene/场地区域YardZone.tscn" id="3_bo8na"]
-[ext_resource type="PackedScene" uid="uid://bst7622nt4lra" path="res://Scene/卡堆CardPile.tscn" id="6_srj31"]
-[ext_resource type="PackedScene" uid="uid://cl1dr1se1bmt0" path="res://Scene/卡组区域.tscn" id="7_66sgq"]
-[ext_resource type="PackedScene" uid="uid://bhrpsfbcdvi4i" path="res://Scene/墓地区域.tscn" id="8_m2ibs"]
-[ext_resource type="PackedScene" uid="uid://c760n4k7phvgr" path="res://Scene/除外区域.tscn" id="9_voqw1"]
+[ext_resource type="PackedScene" uid="uid://bin48ybbcm8d5" path="res://Scene/场地区域.tscn" id="3_bo8na"]
+[ext_resource type="PackedScene" uid="uid://cl1dr1se1bmt0" path="res://Scene/卡组区域DeckZone.tscn" id="7_66sgq"]
+[ext_resource type="PackedScene" uid="uid://bhrpsfbcdvi4i" path="res://Scene/墓地区域GraveZone.tscn" id="8_m2ibs"]
+[ext_resource type="PackedScene" uid="uid://c760n4k7phvgr" path="res://Scene/除外区域BanishZone.tscn" id="9_voqw1"]
 
 [node name="战斗场景" type="Control"]
 layout_mode = 3
@@ -21,15 +19,6 @@ script = ExtResource("1_jsmya")
 [node name="场地区域" parent="." instance=ExtResource("3_bo8na")]
 layout_mode = 0
 
-[node name="场地网格" parent="场地区域" instance=ExtResource("1_stogy")]
-layout_mode = 0
-offset_left = 72.0
-offset_top = 56.0
-offset_right = 572.0
-offset_bottom = 656.0
-
-[node name="场地卡堆" parent="场地区域" instance=ExtResource("6_srj31")]
-
 [node name="手牌区域" parent="." instance=ExtResource("2_o7pim")]
 layout_mode = 0
 offset_left = 263.0
@@ -37,30 +26,18 @@ offset_top = 673.0
 offset_right = 967.0
 offset_bottom = 750.0
 
-[node name="手牌卡堆" parent="手牌区域" instance=ExtResource("6_srj31")]
-offset_left = -263.0
-offset_top = -673.0
-offset_right = -223.0
-offset_bottom = -633.0
-
 [node name="卡组区域" parent="." instance=ExtResource("7_66sgq")]
 layout_mode = 0
-offset_left = 1032.0
-offset_top = 120.0
-offset_right = 1072.0
-offset_bottom = 160.0
-
-[node name="卡组卡堆" parent="卡组区域" instance=ExtResource("6_srj31")]
+offset_left = 144.0
+offset_top = 648.0
+offset_right = 184.0
+offset_bottom = 688.0
 
 [node name="墓地区域" parent="." instance=ExtResource("8_m2ibs")]
 layout_mode = 0
 
-[node name="墓地卡堆" parent="墓地区域" instance=ExtResource("6_srj31")]
-
 [node name="除外区域" parent="." instance=ExtResource("9_voqw1")]
 layout_mode = 0
-
-[node name="除外卡堆" parent="除外区域" instance=ExtResource("6_srj31")]
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

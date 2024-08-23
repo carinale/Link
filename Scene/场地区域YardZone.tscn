@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bin48ybbcm8d5"]
-
-[ext_resource type="Script" path="res://Script/BattleScene/Zone/YardZone.cs" id="1_rcpd4"]
-
-[node name="场地区域" type="TextureRect"]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_rcpd4")
